@@ -7,12 +7,14 @@ THis project consists of 3 directories :
 This directory contains terraform code to setup infrastructure on AWS as shown in figure below.
 The main idea is to create a ec2 instance in a public subnet and install a jenkins server on it. Security groups, route table , load balancer, certificate manager is also configured. 
 
+![jenkins on ec2 instance](rw1.drawio.png)
 
 
 2) flask-app-aws : 
 
 This directory contains code to setup infrasturce on AWS as shown in the figure below. The jenkinsfile(which contains code to setup infrastructure) present in this directory is used by the jenkins server running on the ec2 instance in the eu-west-1 region defined in the directory `jenskins-on-ec2`. 
 
+![flask-app-on-aws](rw2.drawio.png)
 
 3) simple-flask-app :
 
