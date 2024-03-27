@@ -1,29 +1,28 @@
-# DEVOPS-INTEGRATION-WITH-TERRAFORM-JENKINS-AND-AWS
+# DevOps Integration with Terraform, Jenkins, and AWS
 
-THis project consists of 3 directories : 
+This project consists of 3 directories:
 
-1) jenkins-on-ec2 : 
+## 1) jenkins-on-ec2:
 
-This directory contains terraform code to setup infrastructure on AWS as shown in figure below.
-The main idea is to create a ec2 instance in a public subnet and install a jenkins server on it. Security groups, route table , load balancer, certificate manager is also configured. 
+This directory contains Terraform code to set up infrastructure on AWS as shown in the figure below. The main idea is to create an EC2 instance in a public subnet and install a Jenkins server on it. Security groups, route tables, load balancer, and certificate manager are also configured.
 
-![jenkins on ec2 instance](rw1.drawio.png)
+![Jenkins on EC2 Instance](rw1.drawio.png)
 
+## 2) flask-app-aws:
 
-2) flask-app-aws : 
+This directory contains code to set up infrastructure on AWS as shown in the figure below. The Jenkinsfile (which contains code to set up infrastructure) present in this directory is used by the Jenkins server running on the EC2 instance in the eu-west-1 region defined in the directory `jenkins-on-ec2`.
 
-This directory contains code to setup infrasturce on AWS as shown in the figure below. The jenkinsfile(which contains code to setup infrastructure) present in this directory is used by the jenkins server running on the ec2 instance in the eu-west-1 region defined in the directory `jenskins-on-ec2`. 
+![Flask App on AWS](rw2.drawio.png)
 
-![flask-app-on-aws](rw2.drawio.png)
+## 3) simple-flask-app:
 
-3) simple-flask-app :
-
-This directory contains code to create a simple python flask application.
+This directory contains code to create a simple Python Flask application.
 
 
-## Overview of the project :
 
-This DevOps project demonstrates the implementation of a continuous integration and continuous deployment (CI/CD) pipeline using Terraform, Jenkins, and AWS Cloud. The project is divided into three main categories: tools, application, and AWS components. 
+## Overview of the Project:
+
+This DevOps project demonstrates the implementation of a continuous integration and continuous deployment (CI/CD) pipeline using Terraform, Jenkins, and AWS Cloud. The project is divided into three main categories: tools, application, and AWS components.
 
 Under the tools category, Terraform is used for infrastructure automation, while Jenkins is employed for CI/CD pipelines. In the application category, a REST-based web application is built using Python Flask, with data stored in a MySQL database hosted on an RDS instance within AWS. AWS components such as custom domains, EC2 instances, and RDS instances are utilized to support the project infrastructure.
 
